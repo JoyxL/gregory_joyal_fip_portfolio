@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+</head>
+<body>
+
+<header class="sticky">
+        <h1 class="hidden">portfolio page</h1>
+        <div class="logo">
+          <img id="logo" src="images/logo.svg" alt="jg_logo" />
+        </div>
+        <nav>
+          <button class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+              <li id="HOME"><a href="index.html#home">HOME</a></li>
+              <li id="PORTFOLIO"><a href="index.html#portfolio">PORTFOLIO</a></li>
+              <li id="ABOUT"><a href="index.html#about">ABOUT</a></li>
+              <li id="CONTACT"><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+          </div>
+        </nav>
+   </header>
+<main>
+
+  <div class="case-study">
+    <div class="study-container">
+      <h1 class="title-header">Case Study: Video Editing Time Optimization</h1>
+      
+      <h2 class="sub-header">Objective:</h2>
+      <p class="description">Reduce editing time for a 30-second commercial while maintaining high quality.</p>
+    
+      <h2 class="sub-header">Approach:</h2>
+      <ul class="approach-list">
+        <li class="approach-item"><strong class="highlight">Pre-production:</strong> Storyboarding and asset organization to avoid delays.</li>
+        <li class="approach-item"><strong class="highlight">Tools:</strong> Used Adobe Premiere Pro with custom shortcuts, templates, and integrated After Effects for efficiency.</li>
+        <li class="approach-item"><strong class="highlight">Workflow:</strong> Created a rough cut first, then parallel processed tasks like graphics and audio.</li>
+        <li class="approach-item"><strong class="highlight">Post-production:</strong> Automated syncing and used preset transitions and effects.</li>
+      </ul>
+    
+      <h2 class="sub-header">Outcome:</h2>
+      <p class="description">Editing time reduced from 8-10 hours to 5 hours, achieving a 40% time savings without compromising quality.</p>
+    
+      <h2 class="sub-header">Conclusion:</h2>
+      <p class="description">Efficient planning and software use streamlined the process and reduced turnaround time.</p>
+    </div>
+      <div class="video-container">
+        <video onclick="playVideo(event)" src="video/earbud.mp4" id="main-video"></video>
+        <div class="video-controls">
+            <button onclick="playVideo(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+            <button onclick="rewindVideo(event)"><i class="fa fa-fast-backward"></i></button>
+            
+            </div>
+           
+        </div>
+        <div class="video-container">
+          <video onclick="playVideo(event)" src="video/" id="main-video"></video>
+          <div class="video-controls">
+              <button onclick="playVideo(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+              <button onclick="rewindVideo(event)"><i class="fa fa-fast-backward"></i></button>
+              
+              </div>
+             
+          </div>
+
+    <footer class="unique-footer-container">
+        <div class="footer-top-section">
+          <div class="footer-info">
+            <p class="footer-location">London / Canada</p>
+            <p class="footer-email">joyalgregory665@gmail.com</p>
+            <p class="footer-phone">(382) 882 1685</p>
+            <div class="footer-social-icons">
+              <img src="images/Icon akar-instagram-fill.svg" alt="Instagram" class="social-icon" />
+              <img src="images/Icon akar-facebook-fill.svg" alt="Facebook" class="social-icon" />
+              <a href="https://www.twitter.com/yourprofile" target="_blank">
+                <img src="images/Icon simple-x.svg" alt="Twitter" class="social-icon" /></a>
+              <a href="https://www.linkedin.com/in/joyal-gregory-33b2052a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <img src="images/Icon akar-linkedin-fill.svg" alt="LinkedIn" class="social-icon" /></a>
+            </div>
+          </div>
+          <button class="footer-button">Let's Work Together</button>
+          <div class="footer-nav-links">
+            <a href="#home" class="footer-link">HOME</a>
+            <a href="#contact" class="footer-link">CONTACT</a>
+            <a href="#portfolio" class="footer-link">PORTFOLIO</a>
+            <a href="#about" class="footer-link">ABOUT</a>
+          </div>
+          <div class="footer-logo">
+            <img src="images/logo.svg" alt="Logo" class="footer-logo-image" />
+          </div>
+        </div>
+        <div class="footer-bottom-section">
+          <p class="footer-copyright">
+            © 2024 Joyal Gregory. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+      <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="js/main.js"></script>
+  </main>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
