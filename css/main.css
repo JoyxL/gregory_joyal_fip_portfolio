@@ -173,44 +173,112 @@
   /* MAIN */
 
   
-  .hero_image {
-    position: absolute;
-    right: 0; 
-    bottom: 0; 
-    max-width: 700px; 
-    height: auto;
-    animation: slideInFromRight 0.9s ease-out; 
-  }
-  @keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%); 
-        opacity: 0; 
-    }
-    100% {
-        transform: translateX(0); 
-        opacity: 1; 
-    }
-}
-  
-.container {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto 1fr; 
+    grid-gap: 30px;
     padding: 50px;
-    max-width: 100%;
     height: 900px;
     overflow: hidden;
-}
-
+    align-items: center;
+  }
 .hero_text {
-    padding: 150px;
-    font-size: 5em;
-    margin-top: 20px;
+  grid-column: 1;
+  font-size: 5em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .hero_test_sub {
-    align-items: center;
-    font-size: 25px;
-    padding: 50px;
-    margin: 100px;
+  grid-column: 1;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
 }
+@media (max-width: 1200px) {
+  .hero_text{
+    font-size: xx-large;
+    margin-top: 400px;
+  }
+
+  .hero_image{
+    margin-top: 500px;
+  }
+  }
+.hero_image {
+  grid-column: 1;
+  
+  position: absolute;
+  right: 0; 
+  padding-top: 0px;
+  max-width: 700px;  
+  height: auto;
+  animation: slideInFromRight 0.9s ease-out;
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .container {
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: auto;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+      grid-template-columns: 1fr 1fr 1fr; 
+      grid-gap: 40px;
+      padding: 100px;
+  }
+  
+ 
+
+  .hero_image {
+      grid-column: 3;
+  }
+}
+
+/* About Section */
+.about_section {
+  display: block;
+  padding: 50px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .about_section {
+    margin-top: 40px;
+  }
+}
+
+.about {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.about_p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0 20px;
+}
+
+
+
 
 .about_section {
    
@@ -234,7 +302,53 @@
 
 }
 
+/* About Section */
+.about_section {
+  display: block;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 50px; 
+}
 
+@media (max-width: 768px) {
+  .about_section {
+    margin-top:700px;
+    padding: 200px; 
+    margin-bottom: 200px;
+  }
+}
+@media (max-width: 1200px) {
+  .about_section {
+    margin-top:700px;
+    padding: 200px; 
+    margin-bottom: 200px; 
+  }
+}
+
+/* Service Section */
+.service_container {
+  padding: 50px;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 50px; 
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .service_container {
+    padding: 30px;
+    margin-bottom: 60px; 
+    margin-top: 2000px;
+  }
+}
+.services {
+  margin-top: 20px;
+}
 
   
   .service_container {
@@ -258,6 +372,24 @@
     gap: 1.5rem;
   }
   
+  @media (max-width: 768px) {
+    .services {
+      grid-template-columns: 1fr;
+    }
+    .title{
+      margin-top: 800px;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    
+    .hero_test_sub{
+      margin-bottom: 100px;
+    }
+    .hero_image{
+      margin-top: 700px;
+    }
+  }
+  
   .service-box {
     background: #181818;
     border: 1px solid #ffffff;
@@ -278,7 +410,11 @@
     font-size: 1.5rem;
     line-height: 1.5;
   }
-
+  @media (max-width: 768px) {
+    .service-box {
+      margin-top: 600px
+    }
+  }
 
 .portfolio-grid {
 
@@ -810,3 +946,25 @@ html {
 .highlight {
   color: #FF5722; 
 }
+.about_section {
+  display: block;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service_container {
+  display: block;
+  padding: 50px;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+}
+.service_container {
+  padding: 50px;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px; }
